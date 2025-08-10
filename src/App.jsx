@@ -21,7 +21,7 @@ function prepareFilms(films, query) {
 
 export const App = () => {
   const [query, setQuery] = useState('');
-  const visibleGoods = prepareFilms(moviesFromServer, query);
+  const visibleMovies = prepareFilms(moviesFromServer, query);
 
   return (
     <div className="page">
@@ -48,7 +48,7 @@ export const App = () => {
           </div>
         </div>
 
-        <MoviesList movies={visibleGoods} />
+        <MoviesList movies={visibleMovies} />
       </div>
 
       <div className="sidebar">Sidebar goes here</div>
